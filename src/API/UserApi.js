@@ -44,7 +44,7 @@ function UserApi(token) {
       const getUser = async () => {
         try {
           //reading user info
-          const res = await axios.get(`/api/auth/userinfo`, {
+          const res = await axios.get(`/api/auth/userinfo`, {     
             headers: { Authorization: token },
           });
           //set login state
