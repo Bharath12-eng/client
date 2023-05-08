@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import UserApi from './API/UserApi';
+import EmployeeApi from './API/EmployeeApi';
 
 export const GlobalContext = createContext();
 
@@ -27,8 +28,9 @@ function DataProvider(props) {
     let data = {
         token: [token, setToken],
         userAPI: UserApi(token),
-        isAdmin: [isAdmin, setIsAdmin]
-    }
+        isAdmin: [isAdmin, setIsAdmin],
+        employeeAPI: EmployeeApi()
+    };
 
     return (
         <GlobalContext.Provider value={data}>

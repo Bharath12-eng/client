@@ -14,15 +14,15 @@ import Employee from './screens/Employee'
 
 function Pages() {
     const state = useContext(GlobalContext);
-    const [isLogged] = state.userAPI.isLogged
+    // const [isLogged] = state.userAPI.isLogged
     return (
         <Router>
             <Menu />
             <ToastContainer autoClose={5000} position={'top-right'} />
             <Routes>
-                <Route exact path={"/"} element={isLogged ? <Home /> : <Login />} />
-                <Route exact path={"/login"} element={isLogged ? <Pnf/> :<Login />} />
-                <Route exact path={"/register"} element={isLogged ? <Pnf /> : <Register />} />
+                <Route exact path={"/"} element={ <Home /> } />
+                <Route exact path={"/login"} element={ <Login />} />
+                <Route exact path={"/register"} element={ <Register />} />
                 <Route exact path={'/*'} element={<Pnf />} />
                 <Route exact path={'/home'} element={<Home/>} />
                 <Route exact path={'/employee'} element={<Employee/>} />
