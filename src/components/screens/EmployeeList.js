@@ -1,18 +1,15 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../GlobalContext';
-// import EmployeeCore from './EmployeeCore';
 import Sidenav from '../Layout/Sidenav'
 import Navbar from '../Layout/Navbar'
 import Employee from './Employee';
 
 
-
-
-function EmployeeCore() {
+function EmployeeList() {
     const data = useContext(GlobalContext);
-    const [employee] = data.employeeAPI.employee;
-
-
+    const [employee] = data.employeeApi.employee;
+    
+    // console.log('employee', JSON.stringify(employee))
     return (
         <>
             <Navbar />
@@ -20,15 +17,17 @@ function EmployeeCore() {
             <div className="row">
                 {
                     employee.map((item, index) => {
-                        return <Employee key={index} {...item} />
+                        // console.log(`=`,item);
+                        return (
+                            <Employee key={index} {...item} />
+                        )
                     })
                 }
-               
+                
             </div>
-
         </>
 
     )
 }
 
-export default EmployeeCore
+export default EmployeeList

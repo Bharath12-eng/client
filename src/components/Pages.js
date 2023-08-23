@@ -4,16 +4,17 @@ import Home from './screens/Home'
 import Menu from './screens/Menu'
 import Login from './screens/Login'
 import Register from './screens/Register'
-
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { GlobalContext } from '../GlobalContext'
 import Pnf from '../utils/Pnf'
 import Employee from './screens/Employee'
+import EmployeeList from './screens/EmployeeList'
+import AddEmployee from './screens/AddEmployee'
+import '../App.css'
 
 function Pages() {
-    const state = useContext(GlobalContext);
+    // const state = useContext(GlobalContext);
     // const [isLogged] = state.userAPI.isLogged
     return (
         <Router>
@@ -26,6 +27,8 @@ function Pages() {
                 <Route exact path={'/*'} element={<Pnf />} />
                 <Route exact path={'/home'} element={<Home/>} />
                 <Route exact path={'/employee'} element={<Employee/>} />
+                <Route exact path={'/list'} element={<EmployeeList/>} />
+                <Route exact path={'/addEmployee'} element={<AddEmployee/>} />
             </Routes>
         </Router>
     )

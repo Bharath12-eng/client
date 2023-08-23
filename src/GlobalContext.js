@@ -25,11 +25,11 @@ function DataProvider(props) {
     }, []);
 
 
-    let data = {
+    const data = {
         token: [token, setToken],
         userAPI: UserApi(token),
         isAdmin: [isAdmin, setIsAdmin],
-        employeeAPI: EmployeeApi()
+        employeeApi: EmployeeApi(),
     };
 
     return (
