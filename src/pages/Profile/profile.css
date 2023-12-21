@@ -1,0 +1,41 @@
+
+/* .modal-container{
+    position: fixed;
+    /* top: 0;
+    left: 0; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: rgba(0, 0,0, 0.5); */
+/* } */ 
+.card-profile-stats{
+    max-width: 86px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+.card-profile {
+    border-radius: 20px;
+}
+
+.profile-data{
+    display: flex;
+    justify-content: center ;
+}
+
+.close-data{
+    margin-left: 893% ;
+    margin-top: -51%;
+}
+
+
+.email{
+    color: rgb(238,101,122);
+}
+
+.location{
+    color: blue;
+}
+
+.calender{
+    color: purple;
+}

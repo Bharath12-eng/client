@@ -10,9 +10,9 @@ function EmployeeApi() {
     const [employee, setEmployee] = useState([])
 
     const getEmployee = async () =>{
-        const res = await axios.get(`api/employee`);
+        // const res = await axios.get(`api/employee`);
         // console.log('employee=', res.data);
-        setEmployee(res.data.employee)
+        // setEmployee(res.data.employee)
     }
 
     useEffect(() => {
@@ -25,3 +25,4 @@ function EmployeeApi() {
 }
 
 export default EmployeeApi 
+

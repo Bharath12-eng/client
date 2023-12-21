@@ -24,21 +24,21 @@ const LoadingSpinner = () => {
 
 const initialState = {
     personalDetails: {
-        empFirstName: '',
-        empLastName: '',
-        empFatherName: '',
-        empMotherName: '',
-        empEmail: '',
-        empBloodGroup: '',
-        empPhone: null,
-        empAltPhone: null,
-        empAge: null,
-        empDOB: '',
-        empMaritalStatus: '',
-        empLanguages: '',
-        empAccommodation: '',
-        empGender: '',
-        empFamily: [
+        FirstName: '',
+        LastName: '',
+        FatherName: '',
+        MotherName: '',
+        Email: '',
+        BloodGroup: '',
+        Phone: null,
+        AltPhone: null,
+        Age: null,
+        DOB: '',
+        MaritalStatus: '',
+        Languages: '',
+        Accommodation: '',
+        Gender: '',
+        Family: [
             {
                 relation: '',
                 age: null,
@@ -47,16 +47,16 @@ const initialState = {
                 otherDetails: '',
             },
         ],
-        empCurrentHouseNo: '',
-        empCurrentRoadLocality: '',
-        empCurrentCity: '',
-        empCurrentState: '',
-        empCurrentPinCode: '',
-        empPermanentHouseNo: '',
-        empPermanentRoadLocality: '',
-        empPermanentCity: '',
-        empPermanentState: '',
-        empPermanentPinCode: '',
+        CurrentHouseNo: '',
+        CurrentRoadLocality: '',
+        CurrentCity: '',
+        CurrentState: '',
+        CurrentPinCode: '',
+        PermanentHouseNo: '',
+        PermanentRoadLocality: '',
+        PermanentCity: '',
+        PermanentState: '',
+        PermanentPinCode: '',
     },
     qualification: [
         {
@@ -184,6 +184,7 @@ function AddEmployee() {
         }
 
         setEmployee(updatedEmployee);
+        console.log("Set",setEmployee)
     };
 
     const handleSubmit = async (e) => {
@@ -196,51 +197,54 @@ function AddEmployee() {
             // }
 
 
-            // formData.append('personalDetails.empEmail', employee.personalDetails.empEmail);
+            // formData.append('personalDetails.Email', employee.personalDetails.Email);
             // formData.append('personalDetails.empFirstName', employee.personalDetails.empFirstName);
-            // formData.append('personalDetails.empLastName', employee.personalDetails.empLastName);
-            // formData.append('personalDetails.empFatherName', employee.personalDetails.empFatherName);
-            // formData.append('personalDetails.empMotherName', employee.personalDetails.empMotherName);
-            // formData.append('personalDetails.empBloodGroup', employee.personalDetails.empBloodGroup);
-            // formData.append('personalDetails.empPhone', employee.personalDetails.empPhone);
-            // formData.append('personalDetails.empAltPhone', employee.personalDetails.empAltPhone);
-            // formData.append('personalDetails.empAge', employee.personalDetails.empAge);
-            // formData.append('personalDetails.empDOB', employee.personalDetails.empDOB);
-            // formData.append('personalDetails.empMaritalStatus', employee.personalDetails.empMaritalStatus);
-            // formData.append('personalDetails.empLanguages', employee.personalDetails.empLanguages);
-            // formData.append('personalDetails.empAccommodation', employee.personalDetails.empAccommodation);
-            // formData.append('personalDetails.empGender', employee.personalDetails.empGender);
+            // formData.append('personalDetails.LastName', employee.personalDetails.LastName);
+            // formData.append('personalDetails.FatherName', employee.personalDetails.FatherName);
+            // formData.append('personalDetails.MotherName', employee.personalDetails.MotherName);
+            // formData.append('personalDetails.BloodGroup', employee.personalDetails.BloodGroup);
+            // formData.append('personalDetails.Phone', employee.personalDetails.Phone);
+            // formData.append('personalDetails.AltPhone', employee.personalDetails.AltPhone);
+            // formData.append('personalDetails.Age', employee.personalDetails.Age);
+            // formData.append('personalDetails.DOB', employee.personalDetails.DOB);
+            // formData.append('personalDetails.MaritalStatus', employee.personalDetails.MaritalStatus);
+            // formData.append('personalDetails.Languages', employee.personalDetails.Languages);
+            // formData.append('personalDetails.Accommodation', employee.personalDetails.Accommodation);
+            // formData.append('personalDetails.Gender', employee.personalDetails.Gender);
 
             
-            // formData.append('personalDetails.empFamily[0].relation', employee.personalDetails.empFamily[0].relation);
-            // formData.append('personalDetails.empFamily[0].age', employee.personalDetails.empFamily[0].age);
-            // formData.append('personalDetails.empFamily[0].education', employee.personalDetails.empFamily[0].education);
-            // formData.append('personalDetails.empFamily[0].occupation', employee.personalDetails.empFamily[0].occupation);
-            // formData.append('personalDetails.empFamily[0].otherDetails', employee.personalDetails.empFamily[0].otherDetails);
+            // formData.append('personalDetails.Family[0].relation', employee.personalDetails.Family[0].relation);
+            // formData.append('personalDetails.Family[0].age', employee.personalDetails.Family[0].age);
+            // formData.append('personalDetails.Family[0].education', employee.personalDetails.Family[0].education);
+            // formData.append('personalDetails.Family[0].occupation', employee.personalDetails.Family[0].occupation);
+            // formData.append('personalDetails.Family[0].otherDetails', employee.personalDetails.Family[0].otherDetails);
 
-            // formData.append('personalDetails.empCurrentHouseNo', employee.personalDetails.empCurrentHouseNo);
-            // formData.append('personalDetails.empCurrentRoadLocality', employee.personalDetails.empCurrentRoadLocality);
-            // formData.append('personalDetails.empCurrentCity', employee.personalDetails.empCurrentCity);
-            // formData.append('personalDetails.empCurrentState', employee.personalDetails.empCurrentState);
-            // formData.append('personalDetails.empCurrentPinCode', employee.personalDetails.empCurrentPinCode);
-            // formData.append('personalDetails.empPermanentHouseNo', employee.personalDetails.empPermanentHouseNo);
-            // formData.append('personalDetails.empPermanentRoadLocality', employee.personalDetails.empPermanentRoadLocality);
-            // formData.append('personalDetails.empPermanentCity', employee.personalDetails.empPermanentCity);
-            // formData.append('personalDetails.empPermanentState', employee.personalDetails.empPermanentState);
-            // formData.append('personalDetails.empPermanentPinCode', employee.personalDetails.empPermanentPinCode);
+            // formData.append('personalDetails.CurrentHouseNo', employee.personalDetails.CurrentHouseNo);
+            // formData.append('personalDetails.CurrentRoadLocality', employee.personalDetails.CurrentRoadLocality);
+            // formData.append('personalDetails.CurrentCity', employee.personalDetails.CurrentCity);
+            // formData.append('personalDetails.CurrentState', employee.personalDetails.CurrentState);
+            // formData.append('personalDetails.CurrentPinCode', employee.personalDetails.CurrentPinCode);
+            // formData.append('personalDetails.PermanentHouseNo', employee.personalDetails.PermanentHouseNo);
+            // formData.append('personalDetails.PermanentRoadLocality', employee.personalDetails.PermanentRoadLocality);
+            // formData.append('personalDetails.PermanentCity', employee.personalDetails.PermanentCity);
+            // formData.append('personalDetails.PermanentState', employee.personalDetails.PermanentState);
+            // formData.append('personalDetails.PermanentPinCode', employee.personalDetails.PermanentPinCode);
 
-            console.log(employee.personalDetails)
+            console.log("adds",employee.personalDetails)
             const res = await axios.post('/api/addEmployee', employee, {
                 headers: {
                     Authorization: token,
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            console.log("add",employee.personalDetails.FirstName)
+           
 
             setImages(false);
             setEmployee(initialState);
             toast.success(res.data.msg);
-            // navigate(`/admin`);
+            navigate(`/allemployee`);
+           
         } catch (err) {
             toast.error(err.response?.data?.msg || 'An error occurred while submitting the form.');
         }
@@ -464,16 +468,18 @@ function AddEmployee() {
                                         <form onSubmit={handleSubmit} className="needs-validation" noValidate>
                                             <div className="row mb-2 mt-5">
                                                 <div className="col-md-4">
-                                                    <label htmlFor="first name" className="form-label">First Name</label>
-                                                    <input type="text" name="personalDetails.empFirstName" id="empFirstName" className="form-control" onChange={handleChangeInput} value={employee.empFirstName} required />
+                                                    <label htmlFor="FirstName" className="form-label">First Name</label>
+                                                    <input type="text" name="personalDetails.FirstName" id="FirstName" className="form-control" onChange={handleChangeInput} value={employee.FirstName} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter a name.
                                                     </div>
+                                                    
                                                 </div>
+                                                
                                                 <div className="col-md-4">
                                                     <label htmlFor="last name" className="form-label">Last Name</label>
-                                                    <input type="text" name="personalDetails.empLastName" id="empLastName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empLastName} required />
+                                                    <input type="text" name="personalDetails.LastName" id="LastName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.LastName} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter a name.
@@ -500,7 +506,7 @@ function AddEmployee() {
                                             <div className="row mb-2">
                                                 <div className="col-md-4">
                                                     <label htmlFor="father name" className="form-label">Father/Husband Name</label>
-                                                    <input type="text" name="personalDetails.empFatherName" id="empFatherName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empFatherName} required />
+                                                    <input type="text" name="personalDetails.FatherName" id="FatherName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.FatherName} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter a name.
@@ -508,7 +514,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-4">
                                                     <label htmlFor="mother name" className="form-label">Mother Name</label>
-                                                    <input type="text" name="personalDetails.empMotherName" id="empMotherName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empMotherName} required />
+                                                    <input type="text" name="personalDetails.MotherName" id="MotherName" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.MotherName} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter a name.
@@ -518,8 +524,8 @@ function AddEmployee() {
                                             <div className="row mb-2">
                                                 <div className="col-md-4">
                                                     <label htmlFor="email" className="form-label">Email Address</label>
-                                                    <input type="email" name="personalDetails.empEmail" id="empEmail" className="form-control" onChange={handleChangeInput}
-                                                    value={employee.personalDetails.empEmail} required />
+                                                    <input type="email" name="personalDetails.Email" id="Email" className="form-control" onChange={handleChangeInput}
+                                                    value={employee.personalDetails.Email} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter an Email-Id.
@@ -527,7 +533,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-4">
                                                     <label htmlFor="Blood" className="form-label">Blood Group</label>
-                                                    <input type="text" name="personalDetails.empBloodGroup" id="empBloodGroup" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empBloodGroup} required />
+                                                    <input type="text" name="personalDetails.BloodGroup" id="BloodGroup" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.BloodGroup} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter your blood group.
@@ -537,7 +543,7 @@ function AddEmployee() {
                                             <div className="row mb-2">
                                                 <div className="col-md-4">
                                                     <label htmlFor="phone" className="form-label">Contact no.</label>
-                                                    <input type="tel" name="personalDetails.empPhone" id="empPhone" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPhone} required />
+                                                    <input type="tel" name="personalDetails.Phone" id="Phone" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.Phone} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter your phone no.
@@ -545,7 +551,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-4">
                                                     <label htmlFor="altno" className="form-label">Alternate no.</label>
-                                                    <input type="tel" name="personalDetails.empAltPhone" id="empAltPhone" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empAltPhone} required />
+                                                    <input type="tel" name="personalDetails.AltPhone" id="AltPhone" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.AltPhone} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter your alternate phone no.
@@ -555,7 +561,7 @@ function AddEmployee() {
                                             <div className="row mb-2">
                                                 <div className="col-md-3">
                                                     <label htmlFor="age" className="form-label">Age</label>
-                                                    <input type="text" name="personalDetails.empAge" id="empAge" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empAge} required />
+                                                    <input type="text" name="personalDetails.Age" id="Age" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.Age} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter your age.
@@ -563,7 +569,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-3">
                                                     <label htmlFor="age" className="form-label">Date of Birth</label>
-                                                    <input type="date" name="personalDetails.empDOB" id="empDOB" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empDOB} required />
+                                                    <input type="date" name="personalDetails.DOB" id="DOB" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.DOB} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter your DOB.
@@ -571,7 +577,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-3">
                                                     <label htmlFor="age" className="form-label">Marital Status</label>
-                                                    <select className="form-select" aria-label="Default select example" name="personalDetails.empMaritalStatus" id="empMaritalStatus" onChange={handleChangeInput} value={employee.personalDetails.empMaritalStatus} required >
+                                                    <select className="form-select" aria-label="Default select example" name="personalDetails.MaritalStatus" id="MaritalStatus" onChange={handleChangeInput} value={employee.personalDetails.MaritalStatus} required >
                                                         <option selected hidden disabled value="">Select an option</option>
                                                         <option value="single">Single</option>
                                                         <option value="married">Married</option>
@@ -586,7 +592,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-3">
                                                     <label htmlFor="age" className="form-label">Languages Known</label>
-                                                    <input type="text" name="personalDetails.empLanguages" id="empLanguages" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empLanguages} required />
+                                                    <input type="text" name="personalDetails.Languages" id="Languages" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.Languages} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the languages.
@@ -596,7 +602,7 @@ function AddEmployee() {
                                             <div className="row mb-4">
                                                 <div className="col-md-4">
                                                     <label htmlFor="age" className="form-label">Accommodation</label>
-                                                    <select className="form-select" aria-label="Default select example" onChange={handleChangeInput} value={employee.personalDetails.empAccommodation} required name='personalDetails.empAccommodation' id='empAccommodation'>
+                                                    <select className="form-select" aria-label="Default select example" onChange={handleChangeInput} value={employee.personalDetails.Accommodation} required name='personalDetails.Accommodation' id='Accommodation'>
                                                         <option selected hidden disabled value="">Select an option</option>
                                                         <option value="rental">Rental</option>
                                                         <option value="paying guest">Paying Guest</option>
@@ -610,7 +616,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-4">
                                                     <label htmlFor="age" className="form-label">Gender</label>
-                                                    <select className="form-select" aria-label="Default select example" onChange={handleChangeInput} value={employee.personalDetails.empGender} required name='personalDetails.empGender' id='empGender'>
+                                                    <select className="form-select" aria-label="Default select example" onChange={handleChangeInput} value={employee.personalDetails.Gender} required name='personalDetails.Gender' id='Gender'>
                                                         <option selected hidden disabled value="">Select an option</option>
                                                         <option value="male">Male</option>
                                                         <option value="female">Female</option>
@@ -704,7 +710,7 @@ function AddEmployee() {
                                                 <h5>Current Address</h5>
                                                 <div className="col-md-3">
                                                     <label htmlFor="Address" className="form-label">House no.</label>
-                                                    <input type="text" name="personalDetails.empCurrentHouseNo" id="empCurrentHouseNo" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empCurrentHouseNo} required />
+                                                    <input type="text" name="personalDetails.CurrentHouseNo" id="CurrentHouseNo" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.CurrentHouseNo} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the details.
@@ -712,7 +718,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-3">
                                                     <label htmlFor="Address" className="form-label">Road/Locality/Landmark</label>
-                                                    <input type="text" name="personalDetails.empCurrentRoadLocality" id="empCurrentRoadLocality" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empCurrentRoadLocality} required />
+                                                    <input type="text" name="personalDetails.CurrentRoadLocality" id="CurrentRoadLocality" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.CurrentRoadLocality} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the details.
@@ -720,7 +726,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">City</label>
-                                                    <input type="text" name="personalDetails.empCurrentCity" id="empCurrentCity" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empCurrentCity} required />
+                                                    <input type="text" name="personalDetails.CurrentCity" id="CurrentCity" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.CurrentCity} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the city.
@@ -728,7 +734,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">State</label>
-                                                    <input type="text" name="personalDetails.empCurrentState" id="empCurrentState" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empCurrentState} required />
+                                                    <input type="text" name="personalDetails.CurrentState" id="CurrentState" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.CurrentState} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the state.
@@ -736,7 +742,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">PinCode</label>
-                                                    <input type="text" name="personalDetails.empCurrentPinCode" id="empCurrentPinCode" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empCurrentPinCode} required />
+                                                    <input type="text" name="personalDetails.CurrentPinCode" id="CurrentPinCode" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.CurrentPinCode} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the pincode.
@@ -747,7 +753,7 @@ function AddEmployee() {
                                                 <h5>Permanent Address</h5>
                                                 <div className="col-md-3">
                                                     <label htmlFor="Address" className="form-label">House no.</label>
-                                                    <input type="text" name="personalDetails.empPermanentHouseNo" id="empPermanentHouseNo" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPermanentHouseNo} required />
+                                                    <input type="text" name="personalDetails.PermanentHouseNo" id="PermanentHouseNo" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.PermanentHouseNo} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the details.
@@ -755,7 +761,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-3">
                                                     <label htmlFor="Address" className="form-label">Road/Locality/Landmark</label>
-                                                    <input type="text" name="personalDetails.empPermanentRoadLocality" id="empPermanentRoadLocality" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPermanentRoadLocality} required />
+                                                    <input type="text" name="personalDetails.PermanentRoadLocality" id="PermanentRoadLocality" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.PermanentRoadLocality} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the details.
@@ -763,7 +769,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">City</label>
-                                                    <input type="text" name="personalDetails.empPermanentCity" id="empPermanentCity" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPermanentCity} required />
+                                                    <input type="text" name="personalDetails.PermanentCity" id="PermanentCity" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.PermanentCity} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the city.
@@ -771,7 +777,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">State</label>
-                                                    <input type="text" name="personalDetails.empPermanentState" id="empPermanentState" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPermanentState} required />
+                                                    <input type="text" name="personalDetails.PermanentState" id="PermanentState" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.PermanentState} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the state.
@@ -779,7 +785,7 @@ function AddEmployee() {
                                                 </div>
                                                 <div className="col-md-2">
                                                     <label htmlFor="Address" className="form-label">PinCode</label>
-                                                    <input type="text" name="personalDetails.empPermanentPinCode" id="empPermanentPinCode" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.empPermanentPinCode} required />
+                                                    <input type="text" name="personalDetails.PermanentPinCode" id="PermanentPinCode" className="form-control" onChange={handleChangeInput} value={employee.personalDetails.PermanentPinCode} required />
 
                                                     <div class="invalid-feedback">
                                                         Please enter the pincode.
@@ -930,6 +936,7 @@ function AddEmployee() {
                                         role="tabpanel"
                                         aria-labelledby="disabled-tab"
                                         tabIndex="0"
+                                        
                                     >
                                         {activeTab === 3 && <h4></h4>}
 

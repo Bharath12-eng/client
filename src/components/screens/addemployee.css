@@ -1,0 +1,23 @@
+.sub-data{
+    display: flex;
+    justify-content: center;
+}
+.form-datas{
+    display: flex;
+    justify-content: center;
+}
+
+.errormsg{
+    color: red;
+    display: flex;
+    justify-content: center;
+    font-size: 14.5px;
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+.Required-data {
+    color: red;
+    /* width: 100%; */
+    font-size: 17px;
+}
